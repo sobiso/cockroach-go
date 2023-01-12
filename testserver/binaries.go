@@ -71,6 +71,7 @@ func GetDownloadResponse(desiredVersion string, nonStable bool) (*http.Response,
 			// https://unix.stackexchange.com/a/120381.
 			cmd := exec.Command("ldd", "--version")
 			out, err := cmd.Output()
+			fmt.Printf("Version out: %v", out)
 			if err != nil {
 				log.Printf("%s: %s: out=%q err=%v", testserverMessagePrefix, cmd.Args, out, err)
 				return "-musl"
