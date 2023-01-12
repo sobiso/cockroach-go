@@ -73,9 +73,12 @@ func GetDownloadResponse(desiredVersion string, nonStable bool) (*http.Response,
 			out, err := cmd.Output()
 			if err != nil {
 				log.Printf("%s: %s: out=%q err=%v", testserverMessagePrefix, cmd.Args, out, err)
-			} else if muslRE.Match(out) {
+			}  
+			if muslRE.Match(out) {
+				log.Println("Version return musl")
 				return "-musl"
 			}
+			log.Println("Version return gnu")
 			return "-gnu"
 		}()
 	}
