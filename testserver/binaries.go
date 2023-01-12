@@ -46,7 +46,8 @@ const (
 )
 
 const (
-	linuxUrlpat  = "https://binaries.cockroachdb.com/cockroach-v%s.linux-amd64.tgz"
+//	linuxUrlpat  = "https://binaries.cockroachdb.com/cockroach-v%s.linux-amd64.tgz"
+	linuxUrlpat  = "https://binaries.cockroachdb.com/cockroach-v%s.linux-musl-amd64.tgz"
 	macUrlpat    = "https://binaries.cockroachdb.com/cockroach-v%s.darwin-10.9-amd64.tgz"
 	winUrlpat    = "https://binaries.cockroachdb.com/cockroach-v%s.windows-6.2-amd64.zip"
 	sourceUrlPat = "https://binaries.cockroachdb.com/cockroach-v%s.src.tgz)"
