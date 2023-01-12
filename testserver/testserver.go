@@ -495,7 +495,7 @@ func NewTestServer(opts ...TestServerOpt) (TestServer, error) {
 	// TODO(rafi): Remove the version check and `start` once we stop testing 19.1.
 	versionCmd := exec.Command(serverArgs.cockroachBinary, "version")
 	versionOutput, err := versionCmd.CombinedOutput()
-	fmt.Printf("versionOutput: %v", versionOutput)
+	fmt.Printf("versionOutput: %s", versionOutput)
 	if err != nil {
 		return nil, fmt.Errorf("%s command %s failed: %w", testserverMessagePrefix, versionCmd, err)
 	}
